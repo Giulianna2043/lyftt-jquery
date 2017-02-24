@@ -1,27 +1,25 @@
+$(document).ready(init);
+
 function init(){
     //console.log(init);
-    var bandera=document.getElementById("bandera");
-    var codigopais=document.getElementById("codigopais");
+    var bandera=$("#bandera");
+    var codigopais=$("#codigopais");
     
-    var banderaC= localStorage.getItem('srcimg');
-    var codeC = localStorage.getItem('code');
+    var banderaC= localStorage.getItem('src');
+    var codeC = localStorage.getItem('codigo');
     
-    bandera.src=banderaC;
-    codigopais.textContent=codeC;
+    bandera.attr({'src':banderaC});
+    codigopais.text(codeC);
 }
-
-
-
 
 
 
 function myFunction() {
     var x = Math.floor((Math.random() * 1000) + 1);
-    alert( "LAB " +  x);
+    alert( "Tu codigo es LAB : " +  x);
 }
 
 
-//busca
 
 
 

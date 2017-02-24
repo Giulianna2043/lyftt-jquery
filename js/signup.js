@@ -9,8 +9,14 @@ function init(){
     var codeC = localStorage.getItem('codigo');
     
     bandera.attr({'src':banderaC});
+    //bandera.attr(banderaC);
     codigopais.text(codeC);
 }
+
+
+
+
+
 
 
 

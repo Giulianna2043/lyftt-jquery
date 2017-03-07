@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mapa2</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/mapa2.css">
 </head>
 <body onload="init()">
@@ -31,8 +31,8 @@
                     <div class="col-xs-6 text-center">
                         <img src="img/master.png" height="30px" width="30px"alt="" > Personal <br><small>Payment</small>
                     </div>
-                    <div class="col-xs-6">
-                        <p id="name-car" class="text-center">$6-12 <br><small>Price estimate</small></p>
+                    <div class="col-xs-6 text-center" ><br>
+                        <p id="precio">$6-12</p><br><p><small>Price estimate</small></p>
                     </div>
                 </div>
             </li>
@@ -42,7 +42,7 @@
                         <i class="glyphicon glyphicon-heart" style="color:#ff00bf;"></i>
                     </div>
                     <div class="col-xs-10">
-                        <p id="name-car">2300 Harrison St</p>
+                        <p id="">Paz-Peru</p>
                     </div>
                 </div>
             </li>
@@ -52,7 +52,7 @@
                         <i class="glyphicon glyphicon-heart" style="color:#3c0980;"></i>
                     </div>
                     <div class="col-xs-10">
-                        <p id="name-car">Caltrain Station</p>
+                        <p id="calle">Caltrain Station</p>
                     </div>
                 </div>
             </li>
@@ -62,7 +62,8 @@
     <a href="cobro.html"class="btn-request" id="boton-request">Request Lyft</a>
     
     <!-- ---------------------------------------------------------------- SCRIPT -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/mapa2.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1OTUCWFO21snB64uTCKgsDmi3UlP5FCo&callback=initMap" async defer></script>
     

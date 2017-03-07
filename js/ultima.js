@@ -41,6 +41,7 @@ function showPosition(position) {
     zoom: 8
   });
     
+   // var myLatLng = {lat: -16.457389199999998, lng: -71.5315308};
     // Create a marker and set its position.
     var marker = new google.maps.Marker({
         map: map,

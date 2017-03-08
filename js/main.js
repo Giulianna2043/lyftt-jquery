@@ -21,7 +21,6 @@ function validacionNomb(event){
 }
 
 
-
 $(document).ready(function()
     {
     $("#name").keyup(validacionNombre);
@@ -33,16 +32,21 @@ $(document).ready(function()
 
 function validacionNombre(){
     /*Los campos nombre y apellido sólo deben permitir caracteres de la A-Z*/
-    var nombre = $("#name").val();
+    var nombre = $("#name");
 
-    //var texto1="Campo requerido";
-    //var texto2="No se acepta numeros";
+        if(nombre.val() !="")
+        {
+        nombre.val(convertirMayus(nombre.val()));
+        }
 
-    if(nombre.length==0)
-    {
+        else
+        { 
         alert("Campo requerido");
+        }
     }
-}
+
+
+
 
 //validacion email
 function validacionEmail(){
@@ -62,3 +66,28 @@ function validacionEmail(){
             }
         }
 }
+
+
+function convertirMayus(texto){
+    
+    var nombreArray = texto.split("");
+    var primeraLetra = nombreArray[0];
+    var mayuscula = primeraLetra.toUpperCase();
+    var espacio = false;
+
+    for(var i=1; i<nombreArray.length; i++) {
+
+        if(espacio){
+            mayuscula += nombreArray[i].toUpperCase();
+            espacio = false;
+        } else {
+            mayuscula += nombreArray[i];
+            if(nombreArray[i] == " ")
+                espacio = true;
+        }
+    }
+    
+    return mayuscula;
+}
+
+

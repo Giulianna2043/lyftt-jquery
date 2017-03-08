@@ -1,3 +1,4 @@
+
 function init() {
     var heightWindow = $(window).height();
     $("#map").css("height",heightWindow);
@@ -65,7 +66,7 @@ function initMap() {
     position: latLongPazPeru,
     map: miMapa,
     label: "l",
-    icon: 'image/carrin.png',
+    icon: 'img/carrin.png',
     draggable: true,
     animation: google.maps.Animation.DROP,
     title: 'Aqui estamos!!!'
@@ -83,7 +84,7 @@ function initMap() {
     icon: 'img/carrin.png'});
     new google.maps.Marker({position: latCinco, map: miMapa,
     label: "l",
-    icon: 'image/carrin.png'});
+    icon: 'img/carrin.png'});
     
     var infowindow = new google.maps.InfoWindow({
     content: contentString
@@ -105,3 +106,26 @@ function initMap() {
       }
     }
 }
+
+$(document).ready(init);
+    function init()
+        {
+            solicitarEstimado();
+        }
+    function solicitarEstimado()
+        {
+            $.ajax({
+            url:"https://clientes.geekadvice.pe/api/estimado",
+            data:{"tipo":1}
+            }).success(function(_data){
+            update(_data)
+            })
+        }
+function update(_info)
+{
+    $("#calle").text(_info.destino);
+    $("#precio").text(_info.estimado.moneda+_info.estimado.min+"-"+_info.estimado.max);
+ //alert(_info.destino);
+ //alert(_info.estimado.min)
+}
+

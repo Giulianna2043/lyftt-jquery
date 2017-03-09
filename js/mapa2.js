@@ -107,6 +107,71 @@ function initMap() {
     }
 }
 
+
+
+
+
+function init() {
+    var heightWindow = $(window).height();
+    $("#map").css("height",heightWindow);
+    var widthBotton = $(window).width();
+    $("#boton").css("width",widthBotton - 10);
+    $("#boton").css("margin-left","5px");
+    $("#div-location").css("width",widthBotton - 10);
+    $("#div-location").css("margin-left","5px");
+
+    $("#boton-request").css("width",widthBotton - 10);
+    $("#boton-request").css("margin-left","5px");
+    
+    $("#list-cars-dos").css("width",widthBotton - 10);
+    $("#list-cars-dos").css("margin-left","5px");
+    
+    initMap();
+    $('#icon-up').click(iconClick);
+    $("#boton").click(setPickup);
+}
+
+function iconClick() {
+    $("#list-cars").toggle();
+}
+
+function setPickup() {
+    $("#div-location").hide();
+    $("#boton").hide();
+    $("#list-cars").hide();
+    $("#boton-request").show();
+    $("#list-cars-dos").show();
+}
+
+var miMapa;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(document).ready(init);
     function init()
         {
@@ -128,4 +193,5 @@ function update(_info)
  //alert(_info.destino);
  //alert(_info.estimado.min)
 }
+
 

@@ -16,9 +16,11 @@ function update(_info)
 {
     $("#imagen").attr({'src':_info.conductor.url});
     $("#nuevo").text(_info.conductor.name);
+    $("#dolar").text(_info.final);
  //alert(_info.destino);
  //alert(_info.estimado.min)
 }
+//{"estimado":{"min":null,"max":null,"moneda":"$"},"final":0,"conductor":{"name":"Maricela Darwinowa","url":"https:\/\/0.academia-photos.com\/34959676\/10181871\/11362172\/s200_maricela.alvarez_drobush.jpg"}}
 
 
 

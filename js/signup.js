@@ -14,12 +14,6 @@ function init(){
 }
 
 
-
-
-
-
-
-
 function myFunction() {
     var x = Math.floor((Math.random() * 1000) + 1);
     alert( "Tu codigo es LAB : " +  x);

@@ -10,13 +10,15 @@
     width: 90%;
 }
 
-#drowp{
-    transform: translateY(-100)
+.dropup
+{
+    transform: translateY(-130px);
 }
 a {
     color: #6f8496;
     text-decoration: none;
     background-color: #667e7e;
+    border-bottom: 1px solid red;
     
 }
 a:hover

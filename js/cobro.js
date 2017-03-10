@@ -16,7 +16,7 @@ function update(_info)
 {
     $("#imagen").attr({'src':_info.conductor.url});
     $("#nuevo").text(_info.conductor.name);
-    $("#dolar").text(_info.final);
+    $("#dolar").text(_info.estimado.moneda+_info.final);
  //alert(_info.destino);
  //alert(_info.estimado.min)
 }

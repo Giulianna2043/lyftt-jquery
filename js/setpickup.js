@@ -15,6 +15,14 @@ function onClickList(evt)
 {
     var srcImg=$(evt.currentTarget).find('.imagencar').attr('src');
     localStorage.setItem('src',srcImg);
+    
+    //var code=$(evt.currentTarget).find('.codigo').text(); 
+    var code=$(evt.currentTarget).find('#frase').text();
+        
+        
+    localStorage.setItem('src',srcImg);
+    localStorage.setItem('frase',code);
+    
 }
 
 
